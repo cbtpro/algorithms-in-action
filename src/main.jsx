@@ -1,8 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import {
-  // createHashRouter,
-  createBrowserRouter,
+  createHashRouter,
+  // createBrowserRouter,
   RouterProvider,
 } from 'react-router-dom'
 import Root, {
@@ -21,7 +21,7 @@ import { action as destroyAction } from './routes/destroy';
 import ErrorPage from './error-page'
 import './index.css'
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: '/',
     element: <Root />,
