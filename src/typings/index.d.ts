@@ -12,10 +12,12 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-import { redirect } from "react-router-dom";
-import { deleteContact } from "../contacts";
-
-export async function action({ params }) {
-  await deleteContact(params.contactId);
-  return redirect("/");
+interface IContact {
+  id: string;
+  first?: string;
+  last?: string;
+  twitter?: string;
+  avatar?: string;
+  notes?: string;
+  createdAt: number;
 }
