@@ -62,7 +62,7 @@ export default function Root() {
               placeholder="Search"
               type="search"
               name="q"
-              defaultValue={q}
+              defaultValue={query}
               onChange={(event) => {
                 const isFirstSearch = q == null;
                 submit(event.currentTarget.form, {
